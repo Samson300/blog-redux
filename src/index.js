@@ -7,6 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import store from './store';
 window.store = store;
 
+const FREQUENCY = 2000;
+const LS_KEY = 'blog-redux';
+let saveInterval = setInterval(() => {
+    const state = store.getState();
+    localStoreage.setItem(LS_KEY, JSON.stringify(state));
+}, FREQUENCY);
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
