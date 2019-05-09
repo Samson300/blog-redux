@@ -10,16 +10,22 @@ export function createPost(payload) {
 }
 window.createPost = createPost;
 
-export function updatePost() {
-
+export function updatePost(id, payload) {
+    return {
+        type: ACTION_UPDATE_POST,
+        payload: {
+            id
+        }
+    }
 }
 
 export function deletePost(id) {
     return {
         type: ACTION_DELETE_POST,
         payload: {
-            id
+            id,
+            ...payload
         }
     }
 }
-window.deletePost = deletePost;
+window.updatePost = updatePost;
