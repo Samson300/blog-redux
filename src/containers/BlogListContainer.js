@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import BlogList from '../components/BlogsList';
+import { selectPost } from '../actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -7,7 +8,15 @@ const mapStateToProps = (state) => {
     }
 };
 
-const makeBlogListSmart = connect(mapStateToProps);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleClick: (id) => {
+            dispatch(selectPost(id));
+        }
+    };
+};
+
+const makeBlogListSmart = connect(mapStateToProps, mapDispatchToProps);
 const SmartBlogList = makeBlogListSmart(BlogList);
 
 export default SmartBlogList;

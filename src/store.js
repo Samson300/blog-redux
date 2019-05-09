@@ -12,7 +12,8 @@ const LS_KEY = 'blog-redux';
 
 
 const rootReducer = combineReducers({
-    posts
+    posts,
+    selectedid
 });
 
 // let initialState = {};

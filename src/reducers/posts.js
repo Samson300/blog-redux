@@ -2,7 +2,7 @@ import {
     ACTION_CREATE_POST, ACTION_DELETE_POST, ACTION_UPDATE_POST
 } from '../actions';
 
-import { generateId } from '../utils'
+import { generateId } from '../utils';
 
 export default function posts(state={}, action={type: ''}) {
     switch(action.type) {
