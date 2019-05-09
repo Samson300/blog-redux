@@ -8,11 +8,17 @@ export function createPost(payload) {
         payload
     };
 }
+window.createPost = createPost;
 
 export function updatePost() {
 
 }
 
 export function deletePost() {
-    
+    return {
+        type: ACTION_DELETE_POST,
+        payload: {
+            id
+        }
+    }
 }
