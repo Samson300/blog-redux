@@ -14,7 +14,8 @@ export function updatePost(id, payload) {
     return {
         type: ACTION_UPDATE_POST,
         payload: {
-            id
+            id,
+            ...payload
         }
     }
 }
@@ -23,8 +24,7 @@ export function deletePost(id) {
     return {
         type: ACTION_DELETE_POST,
         payload: {
-            id,
-            ...payload
+            id
         }
     }
 }
