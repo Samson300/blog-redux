@@ -4,6 +4,7 @@ import {
 } from 'redux';
 
 import posts from './reducers/posts';
+import selectedid from './reducers/selectedid';
 
 const FREQUENCY = 2000;
 const LS_KEY = 'blog-redux';
